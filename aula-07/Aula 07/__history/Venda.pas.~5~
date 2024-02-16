@@ -1,0 +1,59 @@
+unit Venda;
+
+interface
+
+uses
+  Venda.Interfaces;
+
+type
+  TVenda = class(TInterfacedObject, iVenda)
+    private
+      FCodigo : Integer;
+      FQnt : Currency;
+      FPrecoUnitario : Currency;
+    public
+      constructor Create;
+      destructor Destroy; override;
+      class function New : iVenda;
+      function Codigo ( aValue : Integer ) : iVenda;
+      function Qnt ( aValue : Currency ) : iVenda;
+      function PrecoUnitario ( aValue : Currency ) : iVenda;
+      function VenderItem : iVenda;
+  end;
+
+implementation
+
+{ TVenda }
+
+function TVenda.Codigo(aValue: Integer): iVenda;
+begin
+  Result := Self;
+end;
+
+constructor TVenda.Create;
+begin
+
+end;
+
+destructor TVenda.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TVenda.New: iVenda;
+begin
+  Result := Self.Create;
+end;
+
+function TVenda.PrecoUnitario(aValue: Currency): iVenda;
+begin
+
+end;
+
+function TVenda.Qnt(aValue: Currency): iVenda;
+begin
+
+end;
+
+end.

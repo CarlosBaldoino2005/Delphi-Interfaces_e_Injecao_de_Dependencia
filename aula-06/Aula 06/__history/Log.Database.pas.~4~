@@ -1,0 +1,53 @@
+unit Log.Database;
+
+interface
+
+uses
+  Log.Interfaces;
+
+type
+  TLogDataBase = class(TInterfacedObject, iLog)
+    private
+      FMsg : String;
+    public
+      constructor Create;
+      destructor Destroy; override;
+      class function New : iLog;
+      function Msg ( aValue : String ) : iLog;
+      function Save : iLog;
+  end;
+
+implementation
+
+{ TLogDataBase }
+
+constructor TLogDataBase.Create;
+begin
+
+end;
+
+destructor TLogDataBase.Destroy;
+begin
+
+  inherited;
+end;
+
+function TLogDataBase.Msg(aValue: String): iLog;
+begin
+  Result := Self;
+  FMsg := aValue;
+end;
+
+class function TLogDataBase.New: iLog;
+begin
+  Result := Self.Create;
+end;
+
+function TLogDataBase.Save: iLog;
+var
+  aTeste: string;
+begin
+  aTeste := FMsg;
+end;
+
+end.

@@ -1,0 +1,18 @@
+program Project1;
+
+uses
+  Vcl.Forms,
+  Unit1 in 'Unit1.pas' {Form1},
+  Log.Interfaces in 'Log.Interfaces.pas',
+  Log.Txt in 'Log.Txt.pas',
+  Log.Factory in 'Log.Factory.pas',
+  Log.Database in 'Log.Database.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

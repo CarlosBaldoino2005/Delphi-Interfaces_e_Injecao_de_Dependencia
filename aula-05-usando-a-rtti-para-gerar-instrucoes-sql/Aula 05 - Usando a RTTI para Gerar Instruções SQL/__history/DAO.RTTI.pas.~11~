@@ -1,0 +1,83 @@
+unit DAO.RTTI;
+
+interface
+
+type
+
+  TableName = class(TCustomAttribute)
+  private
+    FTableName: String;
+    procedure SetTableName(const Value: String);
+  published
+    constructor Create ( aTableName : String );
+    property TableName : String read FTableName write SetTableName;
+  end;
+
+
+  TDAORTTI = class
+    private
+    public
+      class function getInsertSQL<T : class> ( aEntity : T ) : String;
+  end;
+
+implementation
+
+uses
+  System.RTTI;
+
+{ TDAORTTI }
+
+class function TDAORTTI.getInsertSQL<T>( aEntity : T ) : String;
+var
+  ctxRTTI : TRttiContext;
+  typRTTI : TRttiType;
+  propRTTI : TRttiProperty;
+  attrRTTI : TCustomAttribute;
+  aTableName : String;
+begin
+  ctxRTTI := TRttiContext.Create;
+  try
+    typRTTI := ctxRTTI.GetType(aEntity.ClassInfo);
+
+    for attrRTTI in typRTTI.GetAttributes do
+      if attrRTTI is TableName then
+        aTableName := TableName(attrRTTI).TableName;
+
+
+    Result := 'INSERT INTO ' + aTableName + '(';
+
+    for propRTTI in typRTTI.GetProperties do
+    begin
+      Result := Result + propRTTI.Name + ',';
+    end;
+
+    Result := Copy(Result, 0, Length(Result) - 1);
+
+    Result := Result + ') VALUES (';
+
+    for propRTTI in typRTTI.GetProperties do
+    begin
+      Result := Result + ':' + propRTTI.Name + ',';
+    end;
+
+    Result := Copy(Result, 0, Length(Result) - 1);
+
+    Result := Result + ')';
+  finally
+    ctxRTTI.Free;
+  end;
+end;
+
+{ TableName }
+
+constructor TableName.Create(aTableName: String);
+begin
+  FTableName := aTableName;
+end;
+
+procedure TableName.SetTableName(const Value: String);
+begin
+  FTableName := Value;
+end;
+
+end.

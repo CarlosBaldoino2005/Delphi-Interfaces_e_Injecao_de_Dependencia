@@ -1,0 +1,16 @@
+unit Venda.Interfaces;
+
+interface
+
+type
+  iVenda = interface
+    ['{6888BF2E-F7ED-4096-BA4D-370CDA773CE4}']
+    function Codigo ( aValue : Integer ) : iVenda;
+    function Qnt ( aValue : Currency ) : iVenda;
+    function PrecoUnitario ( aValue : Currency ) : iVenda;
+    function VenderItem : iVenda;
+  end;
+
+implementation
+
+end.

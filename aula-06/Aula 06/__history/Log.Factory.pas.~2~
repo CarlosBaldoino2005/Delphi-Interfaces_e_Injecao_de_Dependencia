@@ -1,0 +1,37 @@
+unit Log.Factory;
+
+interface
+
+uses
+  Log.Interfaces;
+
+type
+  TLogFactory = class(TInterfacedObject, iLogFactory)
+    private
+    public
+      constructor Create;
+      destructor Destroy; override;
+      class function New : iLogFactory;
+  end;
+
+implementation
+
+{ TLogFactory }
+
+constructor TLogFactory.Create;
+begin
+
+end;
+
+destructor TLogFactory.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TLogFactory.New: iLogFactory;
+begin
+  Result := Self.Create;
+end;
+
+end.

@@ -1,0 +1,68 @@
+unit Venda;
+
+interface
+
+uses
+  Venda.Interfaces,
+  System.Generics.Collections;
+
+type
+  TVenda = class(TInterfacedObject, iVenda)
+    private
+      FListItens : TList<iItemAttributes<iVenda>>;
+    public
+      constructor Create;
+      destructor Destroy; override;
+      class function New : iVenda;
+      function VenderItem : iVenda;
+      function ItemAttributes : iItemAttributes<iVenda>;
+  end;
+
+implementation
+
+uses
+  Item.Attributes, System.SysUtils;
+
+{ TVenda }
+
+constructor TVenda.Create;
+begin
+  FListItens := TList<iItemAttributes<iVenda>>.Create;
+end;
+
+destructor TVenda.Destroy;
+begin
+  FListItens.Free;
+  inherited;
+end;
+
+function TVenda.ItemAttributes: iItemAttributes<iVenda>;
+begin
+  FListItens.Add( TItemAttributes<iVenda>.New(Self) );
+  Result := FListItens.Last;
+end;
+
+class function TVenda.New: iVenda;
+begin
+  Result := Self.Create;
+end;
+
+function TVenda.VenderItem: iVenda;
+var
+  I: Integer;
+begin
+  for I := 0 to Pred(FListItens.Count) do
+  begin
+    FListItens[I].Display()(
+      Format('Produto %d - Preço Unit R$ %f - Qnt %f - Total %f',
+      [
+        FListItens[I].Codigo,
+        FListItens[I].PrecoUnitario,
+        FListItens[I].Qnt,
+        (FListItens[I].PrecoUnitario * FListItens[I].Qnt)
+      ])
+    );
+  end;
+end;
+
+end.

@@ -1,0 +1,37 @@
+unit Log.Txt;
+
+interface
+
+uses
+  Log.Interfaces;
+
+type
+  TLogTXT = class(TInterfacedObject, iLog)
+    private
+    public
+      constructor Create;
+      destructor Destroy; override;
+      class function New : iLog;
+  end;
+
+implementation
+
+{ TLogTXT }
+
+constructor TLogTXT.Create;
+begin
+
+end;
+
+destructor TLogTXT.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TLogTXT.New: iLog;
+begin
+  Result := Self.Create;
+end;
+
+end.

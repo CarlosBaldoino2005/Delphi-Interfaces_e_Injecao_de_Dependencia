@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/01/16 13:50:46.000.996,=C:\Users\thuli\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/03/27 13:38:03.000.251,=C:\Users\thuli\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2021/05/25 10:57:50.348,=C:\Users\thuli\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/05/25 11:04:51.900,C:\Users\thuli\Desktop\Interfaces e DI\Aula 01\Unit1.dfm=C:\Users\thuli\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/05/25 11:04:51.900,C:\Users\thuli\Desktop\Interfaces e DI\Aula 01\Unit1.pas=C:\Users\thuli\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/05/25 11:04:53.500,C:\Users\thuli\Desktop\Interfaces e DI\Aula 01\Project1.dproj=C:\Users\thuli\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/05/25 11:05:22.270,=C:\Users\thuli\Desktop\Interfaces e DI\Aula 01\Unit2.pas</Transaction>
+    <Transaction>2021/05/25 11:05:34.304,C:\Users\thuli\Desktop\Interfaces e DI\Aula 01\LampadaIncandecente.dfm=C:\Users\thuli\Desktop\Interfaces e DI\Aula 01\Unit2.dfm</Transaction>
+    <Transaction>2021/05/25 11:05:34.304,C:\Users\thuli\Desktop\Interfaces e DI\Aula 01\LampadaIncandecente.pas=C:\Users\thuli\Desktop\Interfaces e DI\Aula 01\Unit2.pas</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,52 @@
+unit DAO.RTTI;
+
+interface
+
+type
+  TDAORTTI = class
+    private
+    public
+      class function getInsertSQL<T : class> ( aEntity : T ) : String;
+  end;
+
+implementation
+
+uses
+  System.RTTI;
+
+{ TDAORTTI }
+
+class function TDAORTTI.getInsertSQL<T>( aEntity : T ) : String;
+var
+  ctxRTTI : TRttiContext;
+  typRTTI : TRttiType;
+  propRTTI : TRttiProperty;
+begin
+  ctxRTTI := TRttiContext.Create;
+  try
+    typRTTI := ctxRTTI.GetType(aEntity.ClassInfo);
+    Result := 'INSERT INTO (';
+
+    for propRTTI in typRTTI.GetProperties do
+    begin
+      Result := Result + propRTTI.Name + ',';
+    end;
+
+    Result := Copy(Result, 0, Length(Result) - 1);
+
+    Result := Result + ') VALUES (';
+
+    for propRTTI in typRTTI.GetProperties do
+    begin
+      Result := Result + ':' + propRTTI.Name + ',';
+    end;
+
+    Result := Copy(Result, 0, Length(Result) - 1);
+
+    Result := Result + ')';
+  finally
+    ctxRTTI.Free;
+  end;
+end;
+
+end.

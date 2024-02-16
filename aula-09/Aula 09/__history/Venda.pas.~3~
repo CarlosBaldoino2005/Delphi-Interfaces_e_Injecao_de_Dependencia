@@ -1,0 +1,22 @@
+unit Venda;
+
+interface
+
+type
+  TVenda = class
+    private
+    public
+      function VenderItem ( Codigo : Integer; Qnt : Currency; PrecoUnitario : Currency) : Boolean;
+  end;
+
+implementation
+
+{ TVenda }
+
+function TVenda.VenderItem(Codigo: Integer; Qnt,
+  PrecoUnitario: Currency): Boolean;
+begin
+  Result := True;
+end;
+
+end.

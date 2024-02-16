@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/01/16 13:50:46.000.996,=C:\Users\thuli\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/03/27 13:38:03.000.251,=C:\Users\thuli\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2021/05/25 15:45:48.000.669,=C:\Users\thuli\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/05/25 15:46:03.000.499,C:\Users\thuli\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\thuli\Desktop\Interfaces e DI\Aula 06\Unit1.pas</Transaction>
+    <Transaction>2021/05/25 15:46:03.000.499,C:\Users\thuli\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\thuli\Desktop\Interfaces e DI\Aula 06\Unit1.dfm</Transaction>
+    <Transaction>2021/05/25 15:46:05.000.718,C:\Users\thuli\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\thuli\Desktop\Interfaces e DI\Aula 06\Project1.dproj</Transaction>
+    <Transaction>2021/05/25 15:47:13.000.049,=C:\Users\thuli\Desktop\Interfaces e DI\Aula 06\Unit2.pas</Transaction>
+    <Transaction>2021/05/25 15:47:20.000.355,C:\Users\thuli\Desktop\Interfaces e DI\Aula 06\Unit2.pas=C:\Users\thuli\Desktop\Interfaces e DI\Aula 06\Log.Interfaces.pas</Transaction>
+    <Transaction>2021/05/25 15:49:01.000.885,=C:\Users\thuli\Desktop\Interfaces e DI\Aula 06\Unit2.pas</Transaction>
+    <Transaction>2021/05/25 15:49:09.000.630,C:\Users\thuli\Desktop\Interfaces e DI\Aula 06\Unit2.pas=C:\Users\thuli\Desktop\Interfaces e DI\Aula 06\Log.Txt.pas</Transaction>
+    <Transaction>2021/05/25 15:51:35.000.884,=C:\Users\thuli\Desktop\Interfaces e DI\Aula 06\Unit2.pas</Transaction>
+    <Transaction>2021/05/25 15:51:47.000.396,C:\Users\thuli\Desktop\Interfaces e DI\Aula 06\Unit2.pas=C:\Users\thuli\Desktop\Interfaces e DI\Aula 06\Log.Factory.pas</Transaction>
+    <Transaction>2021/05/25 15:56:39.119,=C:\Users\thuli\Desktop\Interfaces e DI\Aula 06\Unit2.pas</Transaction>
+    <Transaction>2021/05/25 15:56:46.140,C:\Users\thuli\Desktop\Interfaces e DI\Aula 06\Log.Database.pas=C:\Users\thuli\Desktop\Interfaces e DI\Aula 06\Unit2.pas</Transaction>
+  </Transactions>
+</BorlandProject>

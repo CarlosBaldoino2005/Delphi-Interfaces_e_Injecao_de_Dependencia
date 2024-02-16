@@ -1,0 +1,7 @@
+unit Log.Interfaces;
+
+interface
+
+implementation
+
+end.
